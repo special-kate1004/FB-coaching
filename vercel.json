@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/opn-play.web.app/(.*)",
+      "source": "/(.*)",
       "destination": "/opn-play.web.app/$1"
     }
   ],
