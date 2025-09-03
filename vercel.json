@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    {
+      "source": "/opn-play.web.app/(.*)",
+      "destination": "/opn-play.web.app/$1"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
