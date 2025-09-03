@@ -1,0 +1,45 @@
+.outer-circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-circle {
+  width: 18px;
+  height: 18px;  
+  border-radius: 50%;
+  font-size: 9px;
+  text-align: center;
+  padding: 4px 0;
+  color: #fff;
+}
+
+.outer-circle.type1 {
+  background-color: rgba(245, 89, 133, 0.3); 
+  left: 20px;
+  top: 135px;
+}
+.outer-circle.type2 {
+  background-color: rgba(255, 229, 117, 0.30);
+  right: 35px;
+  bottom: 115px;
+}
+.outer-circle.type3 {
+  background-color: rgba(104, 224, 201, 0.30);
+  left: 20px;
+  top: 125px;
+}
+
+.type1 .inner-circle {
+  background-color: #F55985;
+}
+.type2 .inner-circle {
+  background-color: #FFE575;
+}
+.type3 .inner-circle {
+  background-color: #68E0C9;
+}

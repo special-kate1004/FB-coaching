@@ -1,0 +1,2663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from opn-play.web.app/physical-performance-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 09:28:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - OPNPlay</title>
+  <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&amp;display=swap" rel="stylesheet">
+  <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="../cdn.jsdelivr.net/npm/bootstrap-select%401.14.0-beta3/dist/css/bootstrap-select.min.css">
+  <link href="../cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../cdn.jsdelivr.net/npm/summernote/dist/summernote-bs5.css" rel="stylesheet">
+  <link rel="stylesheet" href="../cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="../cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css" />
+  <link href="../cdn.jsdelivr.net/npm/bootstrap-wysiwyg%402.0.1/css/style.min.css" rel="stylesheet">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/main.min.css" rel="stylesheet"> -->
+  <link rel="icon" type="image/x-icon" href="assets/png/logo-tablet.png">
+  <link href="assets/css/standard.css" rel="stylesheet">
+  <link href="assets/css/dashboard.css" rel="stylesheet">
+  <link href="assets/css/sidebar.css" rel="stylesheet">
+  <link href="assets/css/main_content.css" rel="stylesheet">
+  <link href="assets/css/standard.css" rel="stylesheet">
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="../cdn.jsdelivr.net/npm/bootstrap-select%401.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="../cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="../cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="../cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+  <script src="../cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+  <script src="../cdn.jsdelivr.net/npm/bootstrap-wysiwyg%402.0.1/js/bootstrap-wysiwyg.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper pt-24">
+    <!-- Sidebar -->
+    <div class="overflow-y-scroll position-fixed w-max-content sidebar-container main-container bg-custom-primary pb-60 z-2">
+      <div class="d-none d-xxl-flex flex-column sidebar-desktop-container pt-60 pb-60 gap-40 px-20">
+        <div class="d-flex align-items-center justify-content-between sidebar-header pl-20 gap-40">
+          <img src="assets/png/logo.png" class="logo" alt="Logo">
+          <button class="d-none d-md-block d-xxl-none align-items-center justify-content-center sidebar-close-btn">
+            <img src="assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon">
+          </button>
+        </div>
+        <div class="d-flex flex-column gap-20">
+          <a href="index-2.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon">
+              <span class="fw-medium text-white text-16">Home</span>
+            </div>
+          </a>
+          <a href="physical-performance-dashboard.html" class="d-flex flex-row sidebar-link-container py-12 px-20 active radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">Physical Performance</span>
+            </div>
+          </a>						
+          <a href="medical.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon">
+              <span class="fw-medium text-white text-16">Medical</span>
+            </div>
+          </a>
+          <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">Players</span>
+            </div>
+          </a>
+          <a href="calendar.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon">
+              <span class="fw-medium text-white text-16">Calendar</span>
+            </div>
+          </a>
+          <a href="news.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">News</span>
+            </div>
+          </a>
+          <a href="messages.html" class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon">
+              <span class="fw-medium text-white text-16">Messages</span>
+            </div>
+            <span class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
+          </a>
+          <a href="surveys.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon">
+              <span class="fw-medium text-white text-16">Surveys</span>
+            </div>
+          </a>
+          <div class="sidebar-sub-header-container text-xxl-start pt-20 px-20">
+            <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
+          </div>
+          <a href="backoffice.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon">
+              <span class="fw-medium text-white text-16">Backoffice</span>
+            </div>
+          </a>
+          <div class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-8">
+                <img src="assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
+                <div class="d-flex flex-column w-200">
+                  <span class="fw-medium text-white text-start text-16">Jennings Torp</span>
+                  <span class="fw-normal text-white text-start text-14 opacity-0-5">Jennings_Torp@yahoo.com</span>
+                </div>
+              </div>
+              <img src="assets/svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon">
+            </button>
+            <ul class="dropdown-menu sub-menu-container">
+              <li>
+                <a class="dropdown-item text-white" href="profile.html">My Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="logout.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="fw-normal text-white text-14 opacity-0-4">© 2024, All Rights Reserved</span>
+      </div>
+      <div class="d-none d-md-flex d-xxl-none sidebar-tablet-container flex-column pt-60 pb-60 gap-40 px-12">
+        <div class="d-flex flex-column align-items-center justify-content-center sidebar-header gap-40">
+          <button class="d-flex align-items-center justify-content-center sidebar-open-btn">
+            <img src="assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon">
+          </button>
+          <img src="assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo">
+        </div>
+        <div class="d-flex flex-column gap-20">
+          <a href="index-2.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon">
+          </a>
+          <a href="physical-performance-dashboard.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
+            <img src="assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon">
+          </a>
+          <a href="medical.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon">
+          </a>
+          <a href="players.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon">
+          </a>
+          <a href="calendar.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon">
+          </a>
+          <a href="news.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon">
+          </a>
+          <a href="messages.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon">
+          </a>
+          <a href="surveys.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon">
+          </a>
+          <div class="sidebar-sub-header-container text-center">
+            <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
+          </div>
+          <a href="backoffice.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon">
+          </a>
+          <div class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-8">
+                <img src="assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
+              </div>
+            </button>
+            <ul class="dropdown-menu sub-menu-container">
+              <li>
+                <a class="dropdown-item text-white" href="profile.html">My Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="logout.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="dashboard-content"
+      class="d-flex flex-column position-fixed overflow-y-scroll main-content-container main-container ml-xxl-332 ml-md-80 p-40 radius-tl-br-20 gap-20">
+      <!-- Header -->
+      <div class="d-flex flex-row justify-content-between align-items-center toggle-style-guide">
+        <div class="d-flex flex-row align-items-center gap-20">
+          <img src="assets/png/team-logo.png" class="team-logo" alt="Team Icon">
+          <span class="fw-medium text-40">Physical Performance</span>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-12">
+          <button type="button"
+            class="d-flex align-items-center bg-white border-0 position-relative header-icon-container p-18 radius-100"
+            data-bs-toggle="modal" data-bs-target="#notification-modal">
+            <img src="assets/svg/icon-dot.svg" class="position-absolute header-dot-icon" alt="Online Status Icon">
+            <img src="assets/svg/icon-notification-bing.svg" class="header-icon" alt="Notification Icon">
+          </button>
+          <a href="#"
+            class="d-flex align-items-center bg-white position-relative header-icon-container p-18 radius-100">
+            <img src="assets/svg/icon-dot.svg" class="position-absolute header-dot-icon" alt="Online Status Icon">
+            <img src="assets/svg/icon-message-text.svg" class="header-icon" alt="Message Icon">
+          </a>
+        </div>
+      </div>
+
+      <!-- Physical Performance Menu Bar-->
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-1 p-1 bg-tab-primary radius-8">
+        <a href="physical-performance-dashboard.html" class="d-flex flex-fill align-items-center justify-content-center bg-custom-brand fw-medium text-white text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            Dashboard
+        </a>
+        <a href="physical-performance-load.html" class="d-flex flex-fill align-items-center justify-content-center bg-white fw-medium text-custom-primary text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            Load Management
+        </a>
+        <a href="physical-performance-sc.html" class="d-flex flex-fill align-items-center justify-content-center bg-white fw-medium text-custom-primary text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            S&C
+        </a>
+        <a href="physical-performance-rehabilitation.html" class="d-flex flex-fill align-items-center justify-content-center bg-white fw-medium text-custom-primary text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            Rehabilitation
+        </a>
+        <a href="physical-performance-athletic.html" class="d-flex flex-fill align-items-center justify-content-center bg-white fw-medium text-custom-primary text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            Athletic Profile
+        </a>
+        <a href="physical-performance-recovery.html" class="d-flex flex-fill align-items-center justify-content-center bg-white fw-medium text-custom-primary text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            Recovery
+        </a>
+        <a href="physical-performance-settings.html" class="d-flex flex-fill align-items-center justify-content-center bg-white fw-medium text-custom-primary text-16 px-32 py-20 border-btn-neutral box-shadow-primary radius-8 max-height-60">
+            Settings
+        </a>
+      </div>
+
+      <!-- Content Area -->
+      <!-- status -->
+      <div class="d-flex flex-column custom-card gap-20 border-0">
+        <div class="d-none d-xxl-flex">
+          <div class="w-100 d-flex align-items-end justify-content-end">
+            <select class="w-100 max-w-412 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick max-height-45 radius-8">
+              <option>Last 3 Days</option>
+              <option selected>Last 7 Days</option>
+              <option>Last 14 Days</option>
+              <option>Last 28 Days</option>
+              <option>Season to Date</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-none d-xxl-grid grid-col-4 gap-12">
+          <div class="d-flex flex-column align-items-center justify-content-center bg-mini-card-cyan-success px-20 py-20 gap-20 radius-12">
+            <span class="fw-medium text-center max-w-122 text-16 text-neutral line-height-100">Total min. played</span>
+            <div class="d-flex flex-column align-items-center justify-content-center max-w-122 gap-12">
+              <span class="fw-extrabold text-40 text-teal line-height-100">
+                849
+              </span>
+              <span class="fw-extrabold text-20 text-cyan-success line-height-100">+24%</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center bg-mini-card-cyan-success px-20 py-20 gap-20 radius-12">
+            <span class="fw-medium text-center max-w-122 text-16 text-neutral line-height-100">Games</span>
+            <div class="d-flex flex-column align-items-center justify-content-center max-w-122 gap-12">
+              <span class="fw-extrabold text-40 text-teal line-height-100">
+                10
+              </span>
+              <span class="fw-extrabold text-20 text-cyan-success line-height-100">(90%)</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center bg-mini-card-cyan-success px-20 py-20 gap-20 radius-12">
+            <span class="fw-medium text-center max-w-122 text-16 text-neutral line-height-100">On Pitch Sessions Compl.</span>
+            <div class="d-flex flex-column align-items-center justify-content-center max-w-122 gap-12">
+              <span class="fw-extrabold text-40 text-teal line-height-100">
+                39
+              </span>
+              <span class="fw-extrabold text-20 text-cyan-success line-height-100">(90%)</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center bg-mini-card-cyan-success px-20 py-20 gap-20 radius-12">
+            <span class="fw-medium text-center max-w-122 text-16 text-neutral line-height-100">S&C Sessions Completed</span>
+            <div class="d-flex flex-column align-items-center justify-content-center max-w-122 gap-12">
+              <span class="fw-extrabold text-40 text-teal line-height-100">
+                22
+              </span>
+              <span class="fw-extrabold text-20 text-cyan-success line-height-100">(80%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column gap-20">
+        <div class="d-flex flex-column bg-white custom-card p-20 gap-20 border-custom-strong-neutral radius-12">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium text-20 text-black line-height-100">Load Management</span>
+            <div class="d-flex gap-12">
+              <span data-bs-toggle="modal" data-bs-target="#load-management-modal" class="btn btn-default my-auto text-12 box-shadow-primary">
+                Load Management &nbsp; 
+                <img src="assets/svg/arrow-right-white.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
+              </span>
+              <a href="#" class="btn btn-white btn-md px-2 ">
+                <img src="assets/svg/icon-edit.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
+              </a>
+            </div>
+          </div>
+          <div class="d-grid grid-col-4-responsive gap-12">
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">Minutes Played</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-success-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">Total Distance</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-success-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">Accelerations</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-alert-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">Decelerations</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-warning-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">ACWR</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-success-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">HSR</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-warning-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">Sprint Distance</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-success-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-center bg-white gap-20 border-custom-strong-neutral p-20 radius-12">
+              <span class="fw-medium text-16 line-height-100">Metres per Mins</span>
+              <div class="d-flex flex-column align-items-center position-relative mt-minus-20">
+                <div class="solid-radial-warning-apexchart"></div>
+                <div class="d-flex flex-column position-absolute bottom-0 gap-1">
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-teal line-height-100">4% vs avg.</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center justify-content-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-12 text-cyan-alert line-height-100">67% of max.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid grid-col-2 gap-12">
+          <div class="d-flex flex-column bg-white border-custom-strong-neutral p-20 gap-20 radius-12">
+            <span class="d-flex align-items-center fw-medium text-20 text-black py-3 max-height-44">Training Notifications</span>
+            <div class="d-flex flex-column gap-2 max-height-347 custom-tab-content">
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Cameron Evans</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-warning max-height-35 text-14 text-cyan-warning radius-5 px-1 border-btn-success">Edited</span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-aaron-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Rehabilitation</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-success max-height-35 text-14 text-cyan-success radius-5 px-1 border-btn-success">Completed</span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Player Update</span>
+                    <span class="fw-medium text-black text-16">Jacob Carney</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">
+                    Status Change &nbsp;<span class="text-strong-error">Unavailable</span>
+                  </span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Injured</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Incomplete</span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Nick Townsend</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">
+                    Load Management
+                  </span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Cameron Evans</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-warning max-height-35 text-14 text-cyan-warning radius-5 px-1 border-btn-success">Edited</span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-aaron-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Rehabilitation</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span
+                    class="d-flex fw-bold align-items-center bg-custom-success max-height-35 text-14 text-cyan-success radius-5 px-1 border-btn-success">Completed</span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Player Update</span>
+                    <span class="fw-medium text-black text-16">Jacob Carney</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">
+                    Status Change &nbsp;
+                    <span class="text-strong-error">Unavailable</span>
+                  </span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div
+                    class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Injured</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Incomplete</span>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Nick Townsend</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Load
+                    Management
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="d-flex flex-column bg-white border-custom-strong-neutral p-20 gap-20 radius-12 flex-xxl-grow-1">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-medium text-20 text-black line-height-100">Recovery Scores</span>
+              <button class="d-flex align-items-center justify-content-center bg-white px-20 py-12 gap-1 border-btn-neutral radius-8 box-shadow-primary">
+                <span class="fw-medium text-12 text-tab-primary">Recovery</span>
+                <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
+              </button>
+            </div>
+            <div class="d-flex flex-column gap-2 max-height-347 custom-tab-content">
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Cameron Evans</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-warning max-height-35 text-14 text-cyan-warning radius-5 px-1 border-btn-success">Below Goal</span>
+                  <div id="progressCircle1"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-aaron-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Rehabilitation</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <!-- <span class="d-flex fw-bold align-items-center bg-custom-success max-height-35 text-14 text-cyan-success radius-5 px-1 border-btn-success">Completed</span> -->
+                  <div id="progressCircle2"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Player Update</span>
+                    <span class="fw-medium text-black text-16">Jacob Carney</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Below Goal</span>
+                  <div id="progressCircle3"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Injured</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Low Score</span>
+                  <div id="progressCircle4"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Nick Townsend</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Missed Priority</span>
+                  <div id="progressCircle5"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Cameron Evans</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-warning max-height-35 text-14 text-cyan-warning radius-5 px-1 border-btn-success">Below Goal</span>
+                  <div id="progressCircle6"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-aaron-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Rehabilitation</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <!-- <span class="d-flex fw-bold align-items-center bg-custom-success max-height-35 text-14 text-cyan-success radius-5 px-1 border-btn-success">Completed</span> -->
+                  <div id="progressCircle7"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Player Update</span>
+                    <span class="fw-medium text-black text-16">Jacob Carney</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Below Goal</span>
+                  <div id="progressCircle8"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">Injured</span>
+                    <span class="fw-medium text-black text-16">Aaron Wildig</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Low Score</span>
+                  <div id="progressCircle9"></div>
+                </div>
+              </button>
+              <button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-gradient-white max-height-58 radius-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                    <span class="fw-bold text-white text-14 line-height-80">23</span>
+                    <span class="fw-medium text-white text-12 line-height-80">sep</span>
+                  </div>
+                  <img src="assets/png/avatar-nick-bigger.png" class="small-avatar" alt="Player Avatar">
+                  <div class="d-flex flex-column">
+                    <span class="fw-medium text-start text-12 text-neutral">S&C</span>
+                    <span class="fw-medium text-black text-16">Nick Townsend</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-btn-success">Missed
+                    Priority
+                  </span>
+                  <div id="progressCircle10"></div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white custom-card p-20 gap-20 radius-12">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium text-20">Athletic Profiles</span>
+            <div class="d-flex gap-12">
+              <span class="btn btn-default my-auto py-12 px-20 text-12 box-shadow-primary" data-bs-toggle="modal"
+                data-bs-target="#athletic-profiles-modal">
+                Athletic Profiles &nbsp; <img src="assets/svg/arrow-right-white.svg" class="w-12 h-12"
+                  alt="Icon Line Arrow Forward">
+              </span>
+              <a href="#" class="btn btn-white btn-md px-2 ">
+                <img src="assets/svg/icon-edit.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
+              </a>
+            </div>
+          </div>
+          <div class="d-flex row mt-12">
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">CMJ</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">2</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-success line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart1" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">Squat Jump </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">4</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-success line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart2" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">RSI</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">428</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart3" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">Top Speed</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">38.2</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-success line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart4" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">Bench Press</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">84</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-success line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart5" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">BMI</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">8.4</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-success line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart6" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div class="custom-card bg-custom-gradient-primary pt-12 pb-0 px-0 radius-12 overflow-hidden">
+                <div class="d-flex flex-column gap-1 px-20">
+                  <div class="text-16">Body Fat</div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="fs-4 fw-medium">6.4</span>
+                    <div>
+                      <div class="text-danger small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                            <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-alert line-height-100">-50% vs avg</span>
+                        </div>
+                      </div>
+                      <div class="text-success small">
+                        <div class="d-flex align-items-center gap-8">
+                          <div class="d-flex align-items-center bg-custom-success rounded-1">
+                            <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12"
+                              alt="Line Arrow Down Icon">
+                          </div>
+                          <span class="fw-medium text-14 text-cyan-success line-height-100">-21% vs max</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="cmjChart7" class="mt-15- mb-minus-1"></div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xxl-3 px-8 pt-2">
+              <div
+                class="custom-card radius-12 bg-gradient-white d-flex align-items-center justify-content-center flex-column h-100">
+                <img src="assets/svg/icon-add.svg" alt="add icon" />
+                <div class="">Add New</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center align-self-stretch min-h-370 empty-field">
+            <div class="flex-shrink-0"><img src="assets/png/no-athetic-profiles.png"></div>
+            <div class="d-flex flex-column justify-content-center align-items-start align-self-stretch gap-18">
+              <div class="text-24">No Athletic Profiles Set</div>
+              <div class="text-14">This section displays performance benchmarks like strength, power, and speed. Add
+                test results to begin tracking athlete development.</div>
+              <div class="btn btn-default btn-md">Athletic Profiles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-none d-xxl-flex custom-card table-container radius-12">
+        <table class="table sortable-table mb-0">
+          <thead>
+            <tr>
+              <th class="text-12 text-strong-neutral px-2 pl-20 py-12 radius-tl-12">Player Name</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Availability</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Injuries</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Illnesses</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Days Missed</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Sessions Missed</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Games Missed</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">Avg mins per Injury</th>
+              <th class="text-12 text-strong-neutral px-2 py-12">ACWR</th>
+              <th class="text-12 text-strong-neutral px-2 py-12 radius-tr-12">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-strong-purple radius-100">
+                    <img src="assets/png/avatar-nick.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">Liam Thompson</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">64%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">12</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">12</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">12</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">12</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">12</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">12</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-error text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">1.58</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">High Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-success radius-100">
+                    <img src="assets/png/avatar-jacob.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">Noah Johnson</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">82%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">3</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">3</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">3</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">3</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">3</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">3</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0.95</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-strong-teal line-height-100">Minimal Injury Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-success radius-100">
+                    <img src="assets/png/avatar-anthony.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">Ethan Williams</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">91%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">4</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">4</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">4</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">4</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">4</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">4</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-warning text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">1.33</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-strong-warning line-height-100">Moderate Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-strong-purple radius-100">
+                    <img src="assets/png/avatar-nick.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">Oliver Brown</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">27%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-error text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">1.6</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">Very High Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-success radius-100">
+                    <img src="assets/png/avatar-jacob.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">Lucas Davis</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">85%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-success line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-sucess line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-sucess line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-sucess line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-success line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-success line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-warning text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">1.33</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-strong-warning line-height-100">Moderate Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-success radius-100">
+                    <img src="assets/png/avatar-anthony.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">Mason Miller</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">100%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">2</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-success rounded-1">
+                      <img src="assets/svg/icon-line-arrow-up.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">4% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0.95</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-strong-teal line-height-100">Minimal Injury Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-items-center px-20 py-12 gap-12">
+                <div class="d-flex align-items-center gap-12">
+                  <div class="max-w-32 max-height-32 bg-avatar-strong-purple radius-100">
+                    <img src="assets/png/avatar-nick.png" class="mini-avatar radius-100 object-fit-cover"
+                      alt="Player Avatar">
+                  </div>
+                  <span class="fw-medium text-16 line-height-100">James Wilson</span>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">91%</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-success text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">0</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <div class="d-flex align-items-center bg-custom-cyan-alert rounded-1">
+                      <img src="assets/svg/icon-line-arrow-down.svg" width="w-12 h-12" alt="Line Arrow Down Icon">
+                    </div>
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">+8% vs avg</span>
+                  </div>
+                </div>
+              </td>
+              <td class="px-12 py-12 bg-custom-error text-start align-middle">
+                <div class="d-flex gap-5-px">
+                  <span class="fw-medium text-14">1.58</span>
+                  <div class="d-flex align-items-center gap-8">
+                    <span class="fw-medium text-10 text-cyan-alert line-height-100">High Risk</span>
+                  </div>
+                </div>
+              </td>
+              <td class="d-flex align-items-center justify-content-center px-12 py-12 text-start align-middle">
+                <a href="medical-player-dashboard.html" class="btn btn-white btn-md">
+                  <img src="assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12"
+                    alt="Icon Line Arrow Forward">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Modal -->
+  <div class="modal" id="notification-modal">
+    <div class="modal-dialog modal-notifications modal-dialog-scrollable">
+      <div class="modal-content d-flex flex-column gap-20 p-20 w-587 h-max-content radius-12">
+        <!-- Modal Header -->
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="fw-medium text-20">Notifications</span>
+          <button type="button" class="btn-close d-flex align-items-center justify-content-center max-w-56 max-height-56 p-18 radius-100 border-tab-empty" data-bs-dismiss="modal">
+            <img src="assets/svg/icon-close.svg" class="w-20 h-20" alt="Modal Close Icon">
+          </button>
+        </div>
+
+        <div class="d-flex flex-column flex-grow-1 gap-2 custom-tab-content max-height-586">
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">New Message</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Edited</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">-15 Points</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-anthony-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Daily Wellness</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold text-white bg-custom-alert p-6 text-12 radius-5 max-height-20">Injured</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">New Message</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-anthony-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Daily Wellness</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold text-white bg-custom-alert p-6 text-12 radius-5 max-height-20">Injured</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Edited</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success mr-minus-12">Below Goal</span>
+              <div class="mini-warning-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Rehabilitation</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-success p-6 text-12 text-cyan-success radius-5 max-height-20 border-btn-success">Completed</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Player Update</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Incomplete</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Custom Alert</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Load Management</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="mini-success-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success mr-minus-12">Below Goal</span>
+              <div class="mini-warning-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 bg-custom-error border-btn-success mr-minus-12">Low Score</span>
+              <div class="mini-alert-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 bg-custom-error border-btn-success mr-minus-12">Missed Priority</span>
+              <div class="mini-alert-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-success p-6 text-12 text-cyan-success radius-5 max-height-20 border-btn-success">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-success text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-purple p-6 text-12 text-cyan-purple radius-5 max-height-20 border-btn-success">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-purple text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ERTTD Change
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">30/10/25</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Overdue by 8 Days</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Management Modal -->
+  <div class="modal" id="load-management-modal">
+    <div class="w-100 h-100 position-relative">
+      <button type="button" class="btn-close d-flex position-absolute align-items-center justify-content-center max-w-56 max-height-56 p-18 radius-100 border-tab-empty top-40 end-40" data-bs-dismiss="modal">
+        <img src="assets/svg/icon-white-close.svg" class="w-20 h-20" alt="Modal Close Icon">
+      </button>
+      <div class="modal-dialog modal-dialog-centered w-960">
+        <div class="modal-content d-flex flex-column w-960 h-100 p-40 gap-30">
+          <!-- Modal Header -->
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="fw-medium text-32 text-tab-primary line-height-100">Set Load Management Metrics</div>
+            <button class="d-flex align-items-center justify-content-center fw-medium text-white border-0 text-16 max-height-60 bg-custom-brand px-32 py-20 radius-8">
+              Set
+            </button>
+          </div>
+          <div class="d-flex flex-column gap-40">
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">1</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">2</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">3</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">4</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">5</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">6</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">7</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">8</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Integration</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Althletic Profile Modal -->
+  <div class="modal" id="athletic-profiles-modal">
+    <div class="w-100 h-100 position-relative">
+      <button type="button" class="btn-close d-flex position-absolute align-items-center justify-content-center max-w-56 max-height-56 p-18 radius-100 border-tab-empty top-40 end-40" data-bs-dismiss="modal">
+        <img src="assets/svg/icon-white-close.svg" class="w-20 h-20" alt="Modal Close Icon">
+      </button>
+      <div class="modal-dialog modal-dialog-centered w-960">
+        <div class="modal-content d-flex flex-column w-960 h-100 p-40 gap-30">
+          <!-- Modal Header -->
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="fw-medium text-32 text-tab-primary line-height-100">Set Athletic Profile Metrics</div>
+            <button class="d-flex align-items-center justify-content-center fw-medium text-white border-0 text-16 max-height-60 bg-custom-brand px-32 py-20 radius-8">
+              Set
+            </button>
+          </div>
+          <div class="d-flex flex-column gap-40">
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">1</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">2</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">3</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">4</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">5</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">6</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">7</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="d-flex align-items-stretch gap-24">
+              <span class="d-flex justify-content-center w-40 bg-custom-breeze fw-bold text-14 text-white p-10 radius-5">8</span>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Group</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="fw-medium text-16 text-black line-height-100">Data Point</span>
+                <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick border-gray radius-8 min-height-62 min-w-176">
+                  <option selected>Select</option>
+                  <option>One</option>
+                  <option>Two</option>
+                  <option>Three</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JS dependencies -->
+  <script src="assets/js/sidebar.js"></script>
+  <script src="assets/js/min-radial-warning-apexchart.js"></script>
+  <script src="assets/js/min-radial-success-apexchart.js"></script>
+  <script src="assets/js/min-radial-alert-apexchart.js"></script>
+  <script src="assets/js/datatable.js"></script>
+  <script src="assets/js/bootstrap-select.js"></script>
+  <script src="assets/js/physical-dashboard.js"></script>
+	<script src="assets/js/solid-radial-bar-apexchart.js"></script>
+</body>
+
+
+<!-- Mirrored from opn-play.web.app/physical-performance-dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 09:28:59 GMT -->
+</html>

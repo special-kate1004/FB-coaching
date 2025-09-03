@@ -1,0 +1,50 @@
+.main-content-container {
+  background-color: #F8F8FC;
+  width: -webkit-fill-available;
+}
+
+.header-icon-container {
+	border: 1px solid #F0F3F7;
+}
+
+.main-content-container-sidebar-open {
+  width: calc(100vw - 332px);
+}
+
+.main-content-container-sidebar-close {
+  width: calc(100vw - 80px);
+}
+
+@media screen and (min-width: 768px) {
+  .team-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .header-icon-container {
+    width: 56px;
+    height: 56px;
+  }
+
+  .header-dot-icon {
+    top: 14.3px;
+    right: 14.3px;
+  }
+
+  .header-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399) {
+  .main-content-container {
+    width: calc(100vw - 80px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main-content-container {
+    width: calc(100vw - 332px);
+  }
+}

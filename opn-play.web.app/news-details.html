@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from opn-play.web.app/news-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 09:30:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - OPNPlay</title>
+  <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&amp;display=swap" rel="stylesheet" />
+  <link href="../cdn.jsdelivr.net/npm/bootstrap%405.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="../cdn.jsdelivr.net/npm/bootstrap-select%401.14.0-beta3/dist/css/bootstrap-select.min.css" />
+  <link href="../cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/main.min.css" rel="stylesheet"> -->
+  <link rel="icon" type="image/x-icon" href="assets/png/logo-tablet.png" />
+  <link href="assets/css/standard.css" rel="stylesheet" />
+  <link href="assets/css/dashboard.css" rel="stylesheet" />
+  <link href="assets/css/sidebar.css" rel="stylesheet" />
+  <link href="assets/css/main_content.css" rel="stylesheet" />
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="../cdn.jsdelivr.net/npm/bootstrap%405.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="../cdn.jsdelivr.net/npm/bootstrap-select%401.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper pt-24">
+    <!-- Sidebar -->
+    <div class="overflow-y-scroll position-fixed w-max-content sidebar-container main-container bg-custom-primary pb-60 z-2">
+      <div class="d-none d-xxl-flex flex-column sidebar-desktop-container pt-60 pb-60 gap-40 px-20">
+        <div class="d-flex align-items-center justify-content-between sidebar-header pl-20 gap-40">
+          <img src="assets/png/logo.png" class="logo" alt="Logo">
+          <button class="d-none d-md-block d-xxl-none align-items-center justify-content-center sidebar-close-btn">
+            <img src="assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon">
+          </button>
+        </div>
+        <div class="d-flex flex-column gap-20">
+          <a href="index-2.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon">
+              <span class="fw-medium text-white text-16">Home</span>
+            </div>
+          </a>
+          <a href="physical-performance-dashboard.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">Physical Performance</span>
+            </div>
+          </a>						
+          <a href="medical.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon">
+              <span class="fw-medium text-white text-16">Medical</span>
+            </div>
+          </a>
+          <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">Players</span>
+            </div>
+          </a>
+          <a href="calendar.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon">
+              <span class="fw-medium text-white text-16">Calendar</span>
+            </div>
+          </a>
+          <a href="news.html" class="d-flex flex-row sidebar-link-container py-12 px-20 active radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">News</span>
+            </div>
+          </a>
+          <a href="messages.html" class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon">
+              <span class="fw-medium text-white text-16">Messages</span>
+            </div>
+            <span class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
+          </a>
+          <a href="surveys.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon">
+              <span class="fw-medium text-white text-16">Surveys</span>
+            </div>
+          </a>
+          <div class="sidebar-sub-header-container text-xxl-start pt-20 px-20">
+            <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
+          </div>
+          <a href="backoffice.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon">
+              <span class="fw-medium text-white text-16">Backoffice</span>
+            </div>
+          </a>
+          <div class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-8">
+                <img src="assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
+                <div class="d-flex flex-column w-200">
+                  <span class="fw-medium text-white text-start text-16">Jennings Torp</span>
+                  <span class="fw-normal text-white text-start text-14 opacity-0-5">Jennings_Torp@yahoo.com</span>
+                </div>
+              </div>
+              <img src="assets/svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon">
+            </button>
+            <ul class="dropdown-menu sub-menu-container">
+              <li>
+                <a class="dropdown-item text-white" href="profile.html">My Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="logout.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="fw-normal text-white text-14 opacity-0-4">© 2024, All Rights Reserved</span>
+      </div>
+      <div class="d-none d-md-flex d-xxl-none sidebar-tablet-container flex-column pt-60 pb-60 gap-40 px-12">
+        <div class="d-flex flex-column align-items-center justify-content-center sidebar-header gap-40">
+          <button class="d-flex align-items-center justify-content-center sidebar-open-btn">
+            <img src="assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon">
+          </button>
+          <img src="assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo">
+        </div>
+        <div class="d-flex flex-column gap-20">
+          <a href="index-2.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon">
+          </a>
+          <a href="physical-performance-dashboard.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon">
+          </a>
+          <a href="medical.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon">
+          </a>
+          <a href="players.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon">
+          </a>
+          <a href="calendar.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon">
+          </a>
+          <a href="news.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
+            <img src="assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon">
+          </a>
+          <a href="messages.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon">
+          </a>
+          <a href="surveys.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon">
+          </a>
+          <div class="sidebar-sub-header-container text-center">
+            <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
+          </div>
+          <a href="backoffice.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon">
+          </a>
+          <div class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-8">
+                <img src="assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
+              </div>
+            </button>
+            <ul class="dropdown-menu sub-menu-container">
+              <li>
+                <a class="dropdown-item text-white" href="profile.html">My Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="logout.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="d-flex flex-column h-100 position-fixed overflow-y-scroll overflow-x-hidden main-content-container main-container ml-xxl-332 ml-md-80 p-40 radius-tl-br-20 gap-40">
+      <!-- Header -->
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="d-flex flex-row align-items-center gap-20">
+          <img src="assets/png/team-logo.png" class="team-logo" alt="Team Icon">
+          <a href="news.html" class="fw-medium text-40 text-teal text-decoration-underline">Club Notices</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+            <path d="M8.99609 19.963L15.5161 13.443C16.2861 12.673 16.2861 11.413 15.5161 10.643L8.99609 4.12305" stroke="#C5C5C5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="fw-medium text-40 text-tab-primary">Squad List Announced for Upcoming Season</span>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-12">
+          <button type="button"
+            class="d-flex align-items-center bg-white border-0 position-relative header-icon-container p-18 radius-100"
+            data-bs-toggle="modal" data-bs-target="#notification-modal">
+            <img src="assets/svg/icon-dot.svg" class="position-absolute header-dot-icon" alt="Online Status Icon" />
+            <img src="assets/svg/icon-notification-bing.svg" class="header-icon" alt="Notification Icon" />
+          </button>
+          <a href="#"
+            class="d-flex align-items-center bg-white position-relative header-icon-container p-18 radius-100">
+            <img src="assets/svg/icon-dot.svg" class="position-absolute header-dot-icon" alt="Online Status Icon" />
+            <img src="assets/svg/icon-message-text.svg" class="header-icon" alt="Message Icon" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="d-flex flex-column gap-40 align-items-center align-self-stretch justify-content-center">
+        <div class="d-flex bg-news-details radius-12 position-relative min-h-380 w-100">
+          <div class="position-absolute w-100 h-100 bg-custom-litegray-50"></div>
+        </div>
+        <div class="d-flex p-0-120 mt-negative-120 z-1 w-100 mt-minus-120">
+            <div class="d-flex flex-column p-40 gap-60 bg-white radius-12 w-100 custom-card">
+              <div class="d-flex gap-40 align-items-start align-self-stretch">
+                <div class="d-flex py-40 px-20 flex-column justify-content-center align-items-center gap-1 align-self-stretch bg-custom-breeze radius-10">
+                  <span class="text-24 text-white">23</span>
+                  <span class="text-20 text-white">sep</span>
+                </div>
+                <div class="d-flex flex-column align-items-start gap-24">
+                  <div class="tag success max-h-20">Squad List</div>
+                  <div class="text-40">Squad List Announced for Upcoming Season</div>
+                  <div class="text-16 opacity-0-5">Final Roster for 2024/2025 Season Confirmed</div>
+                </div>
+              </div>
+              <div class="d-flex custom-card w-100 border-top-0"></div>
+              <div class="d-flex flex-column gap-40 ">
+                <div class="text-32">Quis ornare scelerisque a vivamus id. Urna adipiscing et hac elit auctor. </div>
+                <div class="text-20 lh-336">Quis ornare scelerisque a vivamus id. Urna adipiscing et hac elit auctor. Accumsan tincidunt accumsan cras tempus sollicitudin eget donec orci. Vitae bibendum netus pellentesque neque dictum nulla quisque nullam. Aliquet eget tellus in augue elementum felis libero. Commodo fermentum elit turpis quam enim dolor in phasellus purus.<br><br>
+Gravida non id pharetra eget quis et. Neque enim risus non sed nisl. Pharetra cras praesent lectus laoreet rhoncus felis. Sit quam convallis ut nec vitae urna est urna diam. Massa magna id ridiculus id donec interdum. Convallis feugiat etiam viverra volutpat pulvinar urna. Ut lobortis semper lectus nulla. Proin et quam convallis dapibus morbi. Sollicitudin bibendum phasellus orci vitae nec tristique. Nisl vitae senectus amet diam viverra massa. Fringilla dui pulvinar est libero in ultricies. Mauris nibh volutpat eleifend lorem risus faucibus quis.
+Eu odio arcu lectus lectus. Purus varius sed dictumst maecenas tempor suspendisse fusce aenean est. In sed volutpat sagittis ornare dolor rhoncus scelerisque. Est non ut vel integer amet. Sit libero vitae commodo egestas iaculis elit non nisl vulputate. Amet tortor scelerisque molestie dui facilisis. Nunc justo molestie in magna. Et phasellus ac sapien eget. Aliquet aenean nunc pretium ultricies eget vitae placerat sed. Tellus id malesuada feugiat pharetra at. Malesuada felis etiam ut volutpat et enim. Aliquam amet scelerisque amet ultrices mattis. Turpis tortor quisque vitae scelerisque et pellentesque in risus. Vestibulum faucibus justo gravida donec tortor egestas. Enim arcu bibendum sed nibh fusce id nulla orci.
+Ac nibh eu venenatis pharetra faucibus bibendum dictum massa. Ac potenti pellentesque tincidunt lacus dictumst. Proin quam orci semper posuere nunc massa vestibulum elementum. Et pellentesque aliquet purus ipsum.</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Modal -->
+  <div class="modal" id="notification-modal">
+    <div class="modal-dialog modal-notifications modal-dialog-scrollable">
+      <div class="modal-content d-flex flex-column gap-20 p-20 w-587 h-max-content radius-12">
+        <!-- Modal Header -->
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="fw-medium text-20">Notifications</span>
+          <button type="button" class="btn-close d-flex align-items-center justify-content-center max-w-56 max-height-56 p-18 radius-100 border-tab-empty" data-bs-dismiss="modal">
+            <img src="assets/svg/icon-close.svg" class="w-20 h-20" alt="Modal Close Icon">
+          </button>
+        </div>
+
+        <div class="d-flex flex-column flex-grow-1 gap-2 custom-tab-content max-height-586">
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">New Message</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Edited</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">-15 Points</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-anthony-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Daily Wellness</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold text-white bg-custom-alert p-6 text-12 radius-5 max-height-20">Injured</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-matthew-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">New Message</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-anthony-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Daily Wellness</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold text-white bg-custom-alert p-6 text-12 radius-5 max-height-20">Injured</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Edited</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success mr-minus-12">Below Goal</span>
+              <div class="mini-warning-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Rehabilitation</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-success p-6 text-12 text-cyan-success radius-5 max-height-20 border-btn-success">Completed</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Player Update</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Incomplete</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Custom Alert</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Load Management</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="mini-success-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success mr-minus-12">Below Goal</span>
+              <div class="mini-warning-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 bg-custom-error border-btn-success mr-minus-12">Low Score</span>
+              <div class="mini-alert-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 bg-custom-error border-btn-success mr-minus-12">Missed Priority</span>
+              <div class="mini-alert-chart mr-minus-12"></div>
+            </div>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-success p-6 text-12 text-cyan-success radius-5 max-height-20 border-btn-success">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-success text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-purple p-6 text-12 text-cyan-purple radius-5 max-height-20 border-btn-success">
+              Status Change
+              <span class="d-flex align-items-center justify-content-center text-strong-purple text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ERTTD Change
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">30/10/25</span>
+            </span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Overdue by 8 Days</span>
+          </a>
+          <a href="#" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card bg-custom-gradient-primary max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover" alt="Player Avatar">
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JS dependencies -->
+  <script src="assets/js/sidebar.js"></script>
+  <script src="assets/js/min-radial-warning-apexchart.js"></script>
+  <script src="assets/js/min-radial-success-apexchart.js"></script>
+  <script src="assets/js/min-radial-alert-apexchart.js"></script>
+  <script src="assets/js/bootstrap-select.js"></script>
+</body>
+
+
+<!-- Mirrored from opn-play.web.app/news-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Jul 2025 09:30:41 GMT -->
+</html>

@@ -1,0 +1,17 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 18 Jul 2025 05:27:34 at https://opn-play.web.app/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://opn-play.web.app/ -O1 "G:\projects\opn_new_new" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+05:29:57	Error: 	"Not Found" (404) at link https://opn-play.web.app/profile.html (from https://opn-play.web.app/)
+05:29:57	Error: 	"Not Found" (404) at link https://opn-play.web.app/logout.html (from https://opn-play.web.app/)
+05:30:41	Error: 	"Not Found" (404) at link https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css (from https://opn-play.web.app/calendar.html)
+05:30:41	Error: 	"Not Found" (404) at link https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.7/index.global.min.css (from https://opn-play.web.app/calendar.html)
+05:30:41	Error: 	"Not Found" (404) at link https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.7/index.global.min.css (from https://opn-play.web.app/calendar.html)
+05:30:43	Error: 	"Not Found" (404) at link https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.0.4/dist/index.min.css (from https://opn-play.web.app/physical-performance-sc.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 16 seconds : 280 links scanned, 272 files written (35605109 bytes overall) [28138717 bytes received at 143564 bytes/sec], 28331199 bytes transferred using HTTP compression in 204 files, ratio 72%, 9.0 requests per connection
+(6 errors, 0 warnings, 0 messages)
