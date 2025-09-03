@@ -5,6 +5,10 @@
       "destination": "/opn-play.web.app/index-2.html"
     },
     {
+      "source": "/opn-play.web.app/(.*)",
+      "destination": "/opn-play.web.app/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/opn-play.web.app/$1"
     }
