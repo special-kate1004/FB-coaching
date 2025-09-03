@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/opn-play.web.app/index-2.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/opn-play.web.app/$1"
     }
